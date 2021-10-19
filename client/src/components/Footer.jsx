@@ -4,13 +4,13 @@ import PetsOutlinedIcon from '@material-ui/icons/PetsOutlined';
 import MailOutlineOutlinedIcon from '@material-ui/icons/MailOutlineOutlined';
 import {
   Container,
-  Title,
-  Line,
+  // Title,
+  // Line,
   Wrapper,
   Left,
   Logo,
   Desc,
-  Button,
+  // Button,
   Right,
   ContactItem,
   Payment,
@@ -19,18 +19,20 @@ import {
 export const Footer = () => {
   return (
     <Container>
-      <Title>Contacts</Title>
-      <Line />
+      {/* <Title>Contacts</Title> */}
+      {/* <Line /> */}
       <Wrapper>
         <Left>
           <Logo>
             <PetsOutlinedIcon /> PETPLAATS
           </Logo>
           <Desc>
-            If you have any questions, email us by clicking the button below. We
-            will contact you shortly.
+            Stichting Baku Animal Rescue Society is door de belastingdienst
+            aangemerkt als Algemeen Nut Beogende Instelling (ANBI). Giften zijn
+            daarom onder voorwaarden aftrekbaar van de inkomstenbelasting (voor
+            particulieren) en vennootschapsbelasting (voor bedrijven).
           </Desc>
-          <Button>Ask a question</Button>
+          {/* <Button>Ask a question</Button> */}
         </Left>
         <Right>
           <ContactItem>

@@ -1,7 +1,7 @@
 export const pets = [
   {
     id: 1,
-    type: 'dog',
+    category: 'dog',
     img: 'https://verhuisdieren.nl/images/profile-picture/1632475559-gAVewm6roa.png',
     city: 'Brummen',
     age: '5 maanden',
@@ -11,7 +11,7 @@ export const pets = [
   },
   {
     id: 2,
-    type: 'dog',
+    category: 'dog',
     img: 'https://verhuisdieren.nl/images/profile-picture/1603120082-xtk1n33wle.png',
     city: 'Amsterdam',
     age: '10 maanden',
@@ -21,7 +21,7 @@ export const pets = [
   },
   {
     id: 3,
-    type: 'cat',
+    category: 'cat',
     img: 'https://verhuisdieren.nl/images/profile-picture/1631966571-HRpnQusmqr.png',
     city: 'Rotterdam',
     age: '5 maanden',
@@ -31,7 +31,7 @@ export const pets = [
   },
   {
     id: 1,
-    type: 'dog',
+    category: 'dog',
     img: 'https://i.ibb.co/XsdmR2c/1.png',
     city: 'Brummen',
     age: '5 maanden',
@@ -41,7 +41,7 @@ export const pets = [
   },
   {
     id: 2,
-    type: 'dog',
+    category: 'dog',
     img: 'https://i.ibb.co/XsdmR2c/1.png',
     city: 'Amsterdam',
     age: '10 maanden',
@@ -51,7 +51,7 @@ export const pets = [
   },
   {
     id: 3,
-    type: 'dog',
+    category: 'dog',
     img: 'https://i.ibb.co/XsdmR2c/1.png',
     city: 'Rotterdam',
     age: '5 maanden',
@@ -61,7 +61,7 @@ export const pets = [
   },
   {
     id: 1,
-    type: 'dog',
+    category: 'dog',
     img: 'https://i.ibb.co/XsdmR2c/1.png',
     city: 'Brummen',
     age: '5 maanden',
@@ -71,7 +71,7 @@ export const pets = [
   },
   {
     id: 2,
-    type: 'dog',
+    category: 'dog',
     img: 'https://i.ibb.co/XsdmR2c/1.png',
     city: 'Amsterdam',
     age: '10 maanden',

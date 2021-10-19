@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   display: flex;
   width: 80%;
   margin: 0 auto;
+  padding-top: 20px;
 `;
 export const Left = styled.div`
   flex: 1;
@@ -24,12 +25,12 @@ export const Title = styled.h1`
   font-weight: 900;
 `;
 
-export const Line = styled.hr`
-  width: 16%;
-  margin: 0 auto;
-  color: ${({ theme }) => theme.colors.primary};
-  margin-bottom: 20px;
-`;
+// export const Line = styled.hr`
+//   width: 16%;
+//   margin: 0 auto;
+//   color: ${({ theme }) => theme.colors.primary};
+//   margin-bottom: 20px;
+// `;
 
 export const Logo = styled.h1``;
 

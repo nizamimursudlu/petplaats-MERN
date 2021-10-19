@@ -16,19 +16,18 @@ export const Bars = () => {
         <Right>
           <Title>BARS</Title>
           <Desc>
-            We run a dog shelter of 120 rescued dogs and operate under a
-            ‘no-kill’ philosophy, which means that we do not euthanise animals.
-            Running a no-kill shelter is an extremely challenging mission. Our
-            shelter receives no local, state or federal funding and is entirely
-            dependent on contributions from the public to cover its annual
-            operating budget. Adoption is a second major problem for us as,
-            sadly, local people in Azerbaijan don’t tend to adopt shelter dogs.
-            Rescued cats are being fostered by our volunteers. We strive for
-            giving the rescued animals a chance to live happy, safe lives and we
-            believe that together we can reach our goal and continue this noble
-            activity.
+            BARS is een non-profit dierenreddingsorganisatie die in Nederland is
+            geregistreerd en het leven redt van straathonden en -katten en
+            andere verwaarloosde dieren uit Azerbeidzjan. Wij zijn
+            dierenliefhebbers die niet onverschillig kunnen blijven voor de
+            ellende van dakloze dieren die op straat verhongeren en worden
+            mishandeld of gedood door wrede mensen. Onze missie is om van deze
+            wereld een betere plek te maken waar alle levens worden gewaardeerd
+            en gerespecteerd. Ons doel is om wreedheid te beëindigen en
+            vriendelijkheid voor dieren te bevorderen en hun lijden te
+            verlichten.
           </Desc>
-          <Button>DONATE</Button>
+          <Button>DONEREN</Button>
         </Right>
       </Wrapper>
     </Container>

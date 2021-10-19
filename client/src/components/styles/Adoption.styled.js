@@ -38,12 +38,12 @@ export const Desc = styled.p`
   letter-spacing: 2px;
 `;
 
-export const Options = styled.div`
+export const Categories = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export const OptionItem = styled.div`
+export const CategoryItem = styled.div`
   flex: 1;
   margin: 10px;
   height: 50vh;
@@ -53,6 +53,7 @@ export const OptionItem = styled.div`
 
 export const Image = styled.img`
   width: 100%;
+  border-radius: 10px;
   height: 100%;
   object-fit: cover;
   &:hover {
@@ -61,7 +62,7 @@ export const Image = styled.img`
   }
 `;
 
-export const OptionInfo = styled.div`
+export const CategoryInfo = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -69,15 +70,17 @@ export const OptionInfo = styled.div`
   text-align: center;
   color: white;
   padding: 20px;
-  margin-top: 250px;
+  margin-top: 200px;
   background-color: rgb(0.1);
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 `;
 
-export const OptionTitle = styled.h1`
+export const CategoryTitle = styled.h1`
   font-size: 50px;
+  font-weight: 900;
 `;
 
-export const OptionDesc = styled.p`
+export const CategoryDesc = styled.p`
   font-size: 30px;
+  font-weight: 900;
 `;

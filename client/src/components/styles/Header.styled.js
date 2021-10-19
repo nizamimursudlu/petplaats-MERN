@@ -25,9 +25,9 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
-  font-size: 60px;
+  font-size: 50px;
   display: flex;
-  font-weight: 800;
+  font-weight: 900;
   justify-content: center;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 `;

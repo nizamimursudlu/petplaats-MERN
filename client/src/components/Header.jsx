@@ -5,16 +5,16 @@ import {
   ButtonsContainer,
   // LeftButton,
   // RightButton,
-} from './styles/Options.styled';
+} from './styles/Header.styled';
 
 export const Options = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>House is not a home without a PET!</Title>
+        <Title>WIJ SPREKEN VOOR DEGENEN DIE GEEN STEM HEBBEN</Title>
         <ButtonsContainer>
-          {/* <LeftButton>LOOKING FOR HOME</LeftButton>
-          <RightButton>LOOKING FOR PET</RightButton> */}
+          {/* {/* <LeftButton>LOOKING FOR HOME</LeftButton> */}
+          {/* <RightButton>DONEREN</RightButton> */}
         </ButtonsContainer>
       </Wrapper>
     </Container>

@@ -7,14 +7,15 @@ export const Container = styled.div`
   color: ${({ theme }) => theme.colors.dark};
   background-color: transparent;
   position: fixed;
-  -webkit-box-shadow: 0 4px 6px -6px #222;
-  -moz-box-shadow: 0 4px 6px -6px #222;
-  box-shadow: 0 4px 10px -5px #222;
+
   ${({ isScrolled }) =>
     isScrolled &&
     `     background-color: #f96d5c;
           color: white;
           transition: all 0.8s ease;
+          -webkit-box-shadow: 0 4px 6px -6px #222;
+          -moz-box-shadow: 0 4px 6px -6px #222;
+          box-shadow: 0 4px 10px -5px #222;
         `}
 `;
 

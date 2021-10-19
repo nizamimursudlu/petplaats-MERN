@@ -1,7 +1,7 @@
-// import Home from './pages/Home';
+import Home from './pages/Home';
 // import Login from './pages/Login';
 // import Register from './pages/Register';
-import PetList from './pages/PetList';
+// import PetList from './pages/PetList';
 import { ThemeProvider } from 'styled-components';
 
 function App() {
@@ -15,10 +15,10 @@ function App() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        {/* <Home /> */}
+        <Home />
         {/* <Login /> */}
         {/* <Register /> */}
-        <PetList />
+        {/* <PetList /> */}
       </ThemeProvider>
     </div>
   );

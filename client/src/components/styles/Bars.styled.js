@@ -4,7 +4,7 @@ export const Container = styled.div`
   height: 750px;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 60px;
 `;
 
 export const Wrapper = styled.div`

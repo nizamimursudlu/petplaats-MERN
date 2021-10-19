@@ -6,42 +6,49 @@ import {
   Header,
   Title,
   Desc,
-  Options,
-  OptionItem,
+  Categories,
+  CategoryItem,
   Image,
-  OptionInfo,
-  OptionTitle,
-  OptionDesc,
+  CategoryInfo,
+  CategoryTitle,
+  CategoryDesc,
 } from './styles/Adoption.styled';
 
 export const Adoption = () => {
   return (
     <Container>
       <Info>
-        <Header>ADOPTION</Header>
-        <Title>Give the gift of unconditional love – ADOPT!</Title>
+        <Header>ADOPTIE</Header>
+        <Title>
+          Geef het geschenk van onvoorwaardelijke liefde – ADOPTEER!
+        </Title>
         <Desc>
-          The best therapist has fur and four legs. Open your heart and home to
-          a friend for life or help us to find them families. We can not change
-          their past, but we can give them a happy future.
+          De beste therapeut heeft een vacht en vier poten. Open je hart en huis
+          voor een vriend voor het leven of help ons families voor hen te
+          vinden. We kunnen hun verleden niet veranderen, maar we kunnen ze een
+          gelukkige toekomst geven.
         </Desc>
       </Info>
-      <Options>
-        <OptionItem>
+      <Categories>
+        <CategoryItem>
           <Image src={adoptDog} />
-          <OptionInfo>
-            <OptionTitle>Dogs</OptionTitle>
-            <OptionDesc>The best breed of dog is a rescue dog.</OptionDesc>
-          </OptionInfo>
-        </OptionItem>
-        <OptionItem>
+          <CategoryInfo>
+            <CategoryTitle>HONDEN</CategoryTitle>
+            <CategoryDesc>
+              Het beste hondenras is een geredde hond.
+            </CategoryDesc>
+          </CategoryInfo>
+        </CategoryItem>
+        <CategoryItem>
           <Image src={adoptCat} />
-          <OptionInfo>
-            <OptionTitle>Cats</OptionTitle>
-            <OptionDesc>Time stent with cats is never wasted.</OptionDesc>
-          </OptionInfo>
-        </OptionItem>
-      </Options>
+          <CategoryInfo>
+            <CategoryTitle>KATTEN</CategoryTitle>
+            <CategoryDesc>
+              Tijd doorgebracht met katten wordt nooit verspild.
+            </CategoryDesc>
+          </CategoryInfo>
+        </CategoryItem>
+      </Categories>
     </Container>
   );
 };
