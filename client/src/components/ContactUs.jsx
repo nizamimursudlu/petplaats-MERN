@@ -1,4 +1,7 @@
-import contactUs from '../contactUs.jpeg';
+import { useState } from 'react';
+import contactUs from '../images/contactUs.jpeg';
+import { ContactUsModal } from './ContactUsModal';
+// import { ContactUsModal } from './ContactUsModal';
 import {
   Container,
   Wrapper,
@@ -9,6 +12,7 @@ import {
 } from './styles/ContactUs.styled';
 
 export const ContactUs = () => {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <Container>
       <Wrapper>
@@ -18,7 +22,14 @@ export const ContactUs = () => {
           nemen. Vul alstublieft het formulier in.
         </Desc>
         <Image src={contactUs} />
-        <Button>STUUR EEN BERICHT</Button>
+        <Button
+          onClick={() => {
+            setOpenModal(true);
+          }}
+        >
+          STUUR EEN BERICHT
+        </Button>
+        {openModal && <ContactUsModal closeModal={setOpenModal} />}
       </Wrapper>
     </Container>
   );

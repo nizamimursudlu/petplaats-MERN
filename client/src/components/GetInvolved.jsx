@@ -1,7 +1,7 @@
-import volunteer from '../volunteer.png';
-import charity from '../charity.png';
-import house from '../house.png';
-import airplane from '../airplane.png';
+import volunteer from '../images/volunteer.png';
+import charity from '../images/charity.png';
+import house from '../images/house.png';
+import airplane from '../images/airplane.png';
 
 import {
   Container,

@@ -1,5 +1,5 @@
-import adoptDog from '../adopt-dog.jpeg';
-import adoptCat from '../adopt-cat.jpeg';
+import adoptDog from '../images/adopt-dog.jpeg';
+import adoptCat from '../images/adopt-cat.jpeg';
 import {
   Container,
   Info,

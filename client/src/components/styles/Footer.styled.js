@@ -4,6 +4,7 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   color: white;
   padding-bottom: 40px;
+  z-index: 2;
 `;
 export const Wrapper = styled.div`
   display: flex;
@@ -24,13 +25,6 @@ export const Title = styled.h1`
   font-size: 40px;
   font-weight: 900;
 `;
-
-// export const Line = styled.hr`
-//   width: 16%;
-//   margin: 0 auto;
-//   color: ${({ theme }) => theme.colors.primary};
-//   margin-bottom: 20px;
-// `;
 
 export const Logo = styled.h1``;
 

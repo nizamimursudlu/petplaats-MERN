@@ -38,6 +38,7 @@ export const Image = styled.img`
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 10px;
 `;
 
 export const Button = styled.button`

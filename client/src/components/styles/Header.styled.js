@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import image from '../../boy-jack-russel.jpeg';
+import image from '../../images/boy-jack-russel.jpeg';
 
 export const Container = styled.div`
   position: relative;
-  z-index: 1;
   width: auto;
   object-fit: contain;
   height: 600px;
