@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { Navbar } from '../components/Navbar';
 import { Pets } from '../components/Pets';
 import { Footer } from '../components/Footer';
-// import { useState } from 'react';
+import { useLocation } from 'react-router';
+import { useState } from 'react';
 
 const Container = styled.div`
   position: absolute;
@@ -12,7 +13,7 @@ const Container = styled.div`
 `;
 const Wrapper = styled.div`
   padding: 40px;
-  background-color: lightgray;
+  background-color: #e6e6e6;
 `;
 
 const FilterContainer = styled.div`
@@ -31,7 +32,7 @@ const FilterText = styled.span`
 
 const Select = styled.select`
   padding: 13px;
-  margin-right: 12px;
+  margin-right: 30px;
   font-size: 16px;
 `;
 
@@ -54,7 +55,18 @@ export const Button = styled.button`
 const Option = styled.option``;
 
 const PetList = () => {
-  // const [addFilters, setAddFilters] = useState(false);
+  const location = useLocation();
+  const cat = location.pathname.split('/')[2];
+  const [filters, setFilters] = useState({});
+
+  const handleFilters = (e) => {
+    const value = e.target.value;
+    setFilters({
+      ...filters,
+      [e.target.name]: value.toLowerCase(),
+    });
+  };
+
   return (
     <div>
       <Navbar />
@@ -62,43 +74,47 @@ const PetList = () => {
         <Wrapper>
           <FilterContainer>
             <Filter>
-              <FilterText>I am looking for:</FilterText>
-              <Select>
-                <Option selected>All Animals</Option>
-                <Option>Dogs</Option>
-                <Option>Cats</Option>
-                <Option>Rabbits</Option>
+              <FilterText>Gender</FilterText>
+              <Select name="gender" onChange={handleFilters}>
+                <Option value="">Alle</Option>
+                {cat === 'dog' ? (
+                  <>
+                    <Option>Teef</Option>
+                    <Option>Reu</Option>
+                  </>
+                ) : (
+                  <>
+                    <Option>Kater</Option>
+                    <Option>Poes</Option>
+                  </>
+                )}
               </Select>
               <FilterText>Age</FilterText>
-              <Select>
-                <Option disabled selected>
-                  Any
-                </Option>
-                <Option>Puppy</Option>
-                <Option>Adult</Option>
-                <Option>Senior</Option>
+              <Select name="age" onChange={handleFilters}>
+                <Option value="">Alle</Option>
+                {cat === 'dog' ? (
+                  <Option>Puppy</Option>
+                ) : (
+                  <Option>Kitten</Option>
+                )}
+                <Option>Volwassen</Option>
+                <Option>Oudere</Option>
               </Select>
+              {cat === 'dog' ? (
+                <>
+                  <FilterText>Size</FilterText>
+                  <Select name="size" onChange={handleFilters}>
+                    <Option value="">Alle</Option>
+                    <Option>Klein</Option>
+                    <Option>Middel</Option>
+                    <Option>Groot</Option>
+                  </Select>
+                </>
+              ) : null}
             </Filter>
-            {/* <Button
-              onClick={() => {
-                setAddFilters((toggle) => !toggle);
-              }}
-            >
-              Filters
-            </Button> */}
           </FilterContainer>
-          {/* {addFilters && (
-            <Filter>
-              <FilterText>Sort Products:</FilterText>
-              <Select>
-                <Option selected>Newest</Option>
-                <Option>Price (asc)</Option>
-                <Option>Price (desc)</Option>
-              </Select>
-            </Filter>
-          )} */}
         </Wrapper>
-        <Pets />
+        <Pets cat={cat} filters={filters} />
         <Footer />
       </Container>
     </div>

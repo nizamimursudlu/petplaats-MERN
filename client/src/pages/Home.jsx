@@ -1,10 +1,10 @@
-import { Adoption } from '../components/Adoption';
 import { Bars } from '../components/Bars';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import { Options } from '../components/Header';
 import { GetInvolved } from '../components/GetInvolved';
 import { ContactUs } from '../components/ContactUs';
+import { Category } from '../components/Category';
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <Navbar />
       <Options />
       <Bars />
-      <Adoption />
+      <Category />
       <GetInvolved />
       <ContactUs />
       <Footer />

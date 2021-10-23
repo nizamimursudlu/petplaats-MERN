@@ -12,8 +12,7 @@ export const Container = styled.div`
   ${({ toggle, theme }) =>
     !toggle &&
     `     background-color: ${theme.colors.light};
-          opacity: 0.88;
-      
+          opacity: 0.96;     
         `}
 `;
 
@@ -35,7 +34,8 @@ export const Header = styled.div`
 
 export const Title = styled.h1`
   padding: 15px;
-  border-bottom: solid 1px lightgray; ;
+  text-align: center;
+  border-bottom: solid 1px lightgrey; ;
 `;
 
 export const Desc = styled.h4`
@@ -47,6 +47,7 @@ export const Desc = styled.h4`
 export const Form = styled.form`
   margin: 0;
   padding: 0;
+  text-align: center;
 `;
 export const FormInput = styled.input`
   border: 1.5px solid gray;

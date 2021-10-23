@@ -1,21 +1,48 @@
-import React from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { pets } from '../data';
-import { Pet } from './Pet';
+import Pet from './Pet';
 
 const Container = styled.div`
-  padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `;
 
-export const Pets = () => {
+export const Pets = ({ cat, filters }) => {
+  const [pets, setPets] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const res = await axios.get(
+          cat
+            ? `http://localhost:5000/api/pets?category=${cat}`
+            : 'http://localhost:5000/api/pets',
+        );
+        setPets(res.data);
+      } catch (err) {}
+    };
+    getProducts();
+  }, [cat]);
+
+  useEffect(() => {
+    cat &&
+      setFilteredProducts(
+        pets.filter((item) =>
+          Object.entries(filters).every(([key, value]) =>
+            item[key].includes(value),
+          ),
+        ),
+      );
+  }, [pets, cat, filters]);
+
   return (
     <Container>
-      {pets.map((item) => (
-        <Pet item={item} key={item.id} />
-      ))}
+      {cat
+        ? filteredProducts.map((item) => <Pet item={item} key={item.id} />)
+        : pets.slice(0, 4).map((item) => <Pet item={item} key={item.id} />)}
     </Container>
   );
 };
