@@ -1,10 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
-// import Login from './pages/Login';
-// import Register from './pages/Register';
-import PetList from './pages/PetList';
+import PetList from './pages/petList/PetList';
+import Donation from './pages/donation/Donation';
 import { ThemeProvider } from 'styled-components';
-import { PetDetails } from './pages/PetDetails';
+import PetDetails from './pages/petDetails/PetDetails';
+import Volunteer from './pages/Volunteer';
+import Foster from './pages/Foster';
+import { AdoptionPage } from './pages/AdoptionPage';
+import { AboutUs } from './pages/WhoWeAre';
+import { ANBI } from './pages/ANBI';
 
 function App() {
   const theme = {
@@ -19,17 +23,15 @@ function App() {
       <ThemeProvider theme={theme}>
         <Router>
           <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/pets/:category">
-              <PetList />
-            </Route>
-            <Route path="/pet/:id">
-              <PetDetails />
-            </Route>
-            {/* <Login /> */}
-            {/* <Register /> */}
+            <Route exact path="/" component={Home} />
+            <Route path="/pets/:category" component={PetList} />
+            <Route path="/pet/:id" component={PetDetails} />
+            <Route exact path="/volunteer" component={Volunteer} />
+            <Route path="/donation" component={Donation} />
+            <Route exact path="/foster" component={Foster} />
+            <Route exact path="/adoption" component={AdoptionPage} />
+            <Route exact path="/about-us" component={AboutUs} />
+            <Route exact path="/anbi" component={ANBI} />
           </Switch>
         </Router>
       </ThemeProvider>

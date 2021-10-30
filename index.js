@@ -12,6 +12,7 @@ app.use(cors());
 app.use(express.json({ extended: true }));
 
 app.use('/api/pets', require('./petRoutes'));
+app.use('/api/checkout', require('./stripeRoute'));
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
