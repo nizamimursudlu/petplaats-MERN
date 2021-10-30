@@ -4,10 +4,11 @@ import { tablet } from '../../responsive';
 export const Container = styled.div`
   margin: 5px;
   color: black;
-  width: fit-content;
-  height: 350px;
+  width: 21.5rem;
+  height: 22rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
   cursor: pointer;
   -webkit-box-shadow: 0 4px 6px -6px #222;
@@ -21,9 +22,10 @@ export const Container = styled.div`
 `;
 
 export const Image = styled.img`
-  height: 70%;
-  max-width: 350px;
+  height: 17rem;
+  width: 21.5rem;
   margin-bottom: 20px;
+  object-fit: cover;
 `;
 
 export const Name = styled.h1`

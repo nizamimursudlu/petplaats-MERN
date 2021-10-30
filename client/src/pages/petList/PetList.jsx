@@ -57,7 +57,7 @@ const PetList = () => {
                   <Option>Kitten</Option>
                 )}
                 <Option>Volwassen</Option>
-                <Option>Oudere</Option>
+                <Option>Senior</Option>
               </Select>
               {cat === 'dog' ? (
                 <>

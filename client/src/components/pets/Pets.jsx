@@ -42,6 +42,7 @@ export const Pets = ({ cat, filters }) => {
           {cat
             ? filteredProducts.map((item) => <Pet item={item} key={item._id} />)
             : pets
+                .sort(() => Math.random() - 0.5)
                 .slice(0, 3)
                 .map((item) => <Pet item={item} key={item._id} />)}
         </Wrapper>
