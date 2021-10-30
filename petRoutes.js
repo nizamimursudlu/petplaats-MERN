@@ -34,7 +34,6 @@ router.get('/', async (req, res) => {
   const qCategory = req.query.category;
   try {
     let pets;
-
     if (qNew) {
       pets = await Pet.find().sort({ createdAt: -1 }).limit(1);
     } else if (qCategory) {
