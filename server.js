@@ -8,6 +8,8 @@ const cors = require('cors');
 
 const PORT = process.env.PORT || 5000;
 
+console.log(process.env.PORT);
+
 app.use(cors());
 app.use(express.json({ extended: true }));
 
@@ -20,6 +22,7 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
+console.log(process.env.MONGO_DB);
 
 async function start() {
   try {

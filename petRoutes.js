@@ -30,13 +30,16 @@ router.get('/find/:id', async (req, res) => {
 });
 
 router.get('/', async (req, res) => {
-  const qNew = req.query.new;
+  // const qNew = req.query.new;
+  // console.log(qNew);
   const qCategory = req.query.category;
+  console.log(qCategory);
   try {
     let pets;
-    if (qNew) {
-      pets = await Pet.find().sort({ createdAt: -1 }).limit(1);
-    } else if (qCategory) {
+    // if (qNew) {
+    //   pets = await Pet.find().sort({ createdAt: -1 }).limit(1);
+    // } else
+    if (qCategory) {
       pets = await Pet.find({
         categories: {
           $in: [qCategory],
