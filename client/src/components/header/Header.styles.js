@@ -23,7 +23,7 @@ export const Title = styled.h1`
   height: 100%;
   display: flex;
   font-weight: 900;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: flex-end;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   text-align: center;
