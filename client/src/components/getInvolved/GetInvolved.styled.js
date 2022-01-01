@@ -21,7 +21,6 @@ export const Options = styled.div`
 
 export const OptionItem = styled.div`
   flex: 1;
-  margin: 10px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -30,13 +29,13 @@ export const OptionItem = styled.div`
     transform: scale(1.02);
     transition: all 0.8s ease;
   }
+  ${tablet({ height: '200px' })}
 `;
 
 export const Image = styled.img`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
   top: 0;
 `;
 

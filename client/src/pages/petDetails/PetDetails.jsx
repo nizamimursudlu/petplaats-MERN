@@ -32,7 +32,7 @@ const PetDetails = () => {
     const getPet = async () => {
       try {
         const res = await axios.get(
-          'http://localhost:5000/api/pets/find/' + id,
+          'http://localhost:8080/api/pets/find/' + id,
         );
         setPet(res.data);
       } catch (err) {}

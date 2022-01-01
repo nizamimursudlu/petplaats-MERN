@@ -27,7 +27,6 @@ export const Footer = () => {
             daarom onder voorwaarden aftrekbaar van de inkomstenbelasting (voor
             particulieren) en vennootschapsbelasting (voor bedrijven).
           </Desc>
-          {/* <Button>Ask a question</Button> */}
         </Left>
         <Right>
           <ContactItem>

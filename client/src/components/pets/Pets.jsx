@@ -14,8 +14,8 @@ export const Pets = ({ cat, filters }) => {
       try {
         const res = await axios.get(
           cat
-            ? `http://localhost:5000/api/pets?category=${cat}`
-            : 'http://localhost:5000/api/pets',
+            ? `http://localhost:8080/api/pets?category=${cat}`
+            : 'http://localhost:8080/api/pets',
         );
         setPets(res.data);
       } catch (err) {}

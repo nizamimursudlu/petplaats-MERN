@@ -62,7 +62,7 @@ const Donation = () => {
   useEffect(() => {
     const makeRequest = async () => {
       try {
-        await axios.post('http://localhost:5000/api/checkout/payment', {
+        await axios.post('http://localhost:8080/api/checkout/payment', {
           tokenId: stripeToken.id,
           amount: sum * 100,
         });
