@@ -31,8 +31,7 @@ import {
 import { TitleLarge } from '../../components/styles/TitleLarge';
 import { Paragraph } from '../../components/styles/Paragraph';
 
-const KEY =
-  'pk_test_51IF5ZWEhVqPAJi7T8yCw5VAKBrVTRbALo8v9F0xm99hQMccethaF9elOHea4HmRyv93Mc0Rih61urSvOUzUFDtB500qbJs7guN';
+const KEY = process.env.REACT_APP_KEY;
 
 const Donation = () => {
   const [sum, setSum] = useState(0);
