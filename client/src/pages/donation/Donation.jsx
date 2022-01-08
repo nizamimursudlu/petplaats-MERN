@@ -31,17 +31,16 @@ import {
 import { TitleLarge } from '../../components/styles/TitleLarge';
 import { Paragraph } from '../../components/styles/Paragraph';
 
-const KEY =
-  'pk_test_51IF5ZWEhVqPAJi7T8yCw5VAKBrVTRbALo8v9F0xm99hQMccethaF9elOHea4HmRyv93Mc0Rih61urSvOUzUFDtB500qbJs7guN';
+const KEY = process.env.REACT_APP_KEY;
 
 const Donation = () => {
   const [sum, setSum] = useState(0);
-  const [boxOne, setBoxOne] = useState(true);
-  const [boxTwo, setBoxTwo] = useState(true);
-  const [boxThree, setBoxThree] = useState(true);
-  const [boxFour, setBoxFour] = useState(true);
-  const [boxFive, setBoxFive] = useState(true);
-  const [boxSix, setBoxSix] = useState(true);
+  const [voerBox, setVoerBox] = useState(true);
+  const [ontwormBox, setOntwormBox] = useState(true);
+  const [vlooienBox, setVlooienBox] = useState(true);
+  const [vaccinBox, setVaccinBox] = useState(true);
+  const [rekeningenBox, setRekeningenBox] = useState(true);
+  const [onderhoudBox, setOnderhoudBox] = useState(true);
   const history = useHistory();
   const [stripeToken, setStripeToken] = useState(null);
   const onToken = (token) => {
@@ -94,7 +93,7 @@ const Donation = () => {
                   type="checkbox"
                   name="voer"
                   value="22"
-                  onClick={(e) => handleClick(e, boxOne, setBoxOne)}
+                  onClick={(e) => handleClick(e, voerBox, setVoerBox)}
                 />
                 <Info>
                   <Image src={feed} />
@@ -109,7 +108,7 @@ const Donation = () => {
                   // id="horns"
                   name="ontworm"
                   value="10"
-                  onClick={(e) => handleClick(e, boxTwo, setBoxTwo)}
+                  onClick={(e) => handleClick(e, ontwormBox, setOntwormBox)}
                 />
                 <Info>
                   <Image src={deworm} />
@@ -121,10 +120,9 @@ const Donation = () => {
               <CheckBox>
                 <input
                   type="checkbox"
-                  // id="horns"
                   name="vlooien"
                   value="30"
-                  onClick={(e) => handleClick(e, boxThree, setBoxThree)}
+                  onClick={(e) => handleClick(e, vlooienBox, setVlooienBox)}
                 />
                 <Info>
                   <Image src={flea} />
@@ -136,10 +134,9 @@ const Donation = () => {
               <CheckBox>
                 <input
                   type="checkbox"
-                  // id="horns"
                   name="ontworm"
                   value="40"
-                  onClick={(e) => handleClick(e, boxFour, setBoxFour)}
+                  onClick={(e) => handleClick(e, vaccinBox, setVaccinBox)}
                 />
 
                 <Info>
@@ -152,10 +149,11 @@ const Donation = () => {
               <CheckBox>
                 <input
                   type="checkbox"
-                  // id="horns"
                   name="rekeningen"
                   value="50"
-                  onClick={(e) => handleClick(e, boxFive, setBoxFive)}
+                  onClick={(e) =>
+                    handleClick(e, rekeningenBox, setRekeningenBox)
+                  }
                 />
                 <Info>
                   <Image src={bill} />
@@ -167,14 +165,13 @@ const Donation = () => {
               <CheckBox>
                 <input
                   type="checkbox"
-                  // id="horns"
                   name="OnderhoudVanAsiel"
                   value="50"
-                  onClick={(e) => handleClick(e, boxSix, setBoxSix)}
+                  onClick={(e) => handleClick(e, onderhoudBox, setOnderhoudBox)}
                 />
                 <Info>
                   <Image src={maintenance} />
-                  <Label>Rekeningen</Label>
+                  <Label>Onderhoud van asiel</Label>
                   <Desc>
                     Reparatie van kennels en verbetering van de
                     levensomstandigheden

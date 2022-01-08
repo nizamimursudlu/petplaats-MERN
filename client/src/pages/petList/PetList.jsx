@@ -1,7 +1,7 @@
 import { Navbar } from '../../components/navbar/Navbar';
 import { Footer } from '../../components/footer/Footer';
 import { useLocation } from 'react-router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Pets } from '../../components/pets/Pets';
 import {
   Container,
@@ -18,6 +18,10 @@ const PetList = () => {
   const cat = location.pathname.split('/')[2];
   const [filters, setFilters] = useState({});
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleFilters = (e) => {
     const value = e.target.value;
     setFilters({
@@ -33,7 +37,7 @@ const PetList = () => {
         <Wrapper>
           <FilterContainer>
             <Filter>
-              <FilterText>Gender</FilterText>
+              <FilterText>GESLACHT</FilterText>
               <Select name="gender" onChange={handleFilters}>
                 <Option value="">Alle</Option>
                 {cat === 'dog' ? (
@@ -48,7 +52,7 @@ const PetList = () => {
                   </>
                 )}
               </Select>
-              <FilterText>Age</FilterText>
+              <FilterText>LEEFTIJD</FilterText>
               <Select name="age" onChange={handleFilters}>
                 <Option value="">Alle</Option>
                 {cat === 'dog' ? (
@@ -61,7 +65,7 @@ const PetList = () => {
               </Select>
               {cat === 'dog' ? (
                 <>
-                  <FilterText>Size</FilterText>
+                  <FilterText>FORMAAT</FilterText>
                   <Select name="size" onChange={handleFilters}>
                     <Option value="">Alle</Option>
                     <Option>Klein</Option>
