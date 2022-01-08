@@ -2,7 +2,6 @@ const router = require('express').Router();
 const stripe = require('stripe')(
   'sk_test_51IF5ZWEhVqPAJi7Tr5C1Z63Clm7RLQ62Pub4Fc7mrwv29AuwnsfsnD5sfUcNpIaZMjBayDy9bNX6UJHYgpmegcnG00c03bGd1x',
 );
-
 router.post('/payment', (req, res) => {
   stripe.charges.create(
     {
