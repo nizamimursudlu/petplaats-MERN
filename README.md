@@ -60,7 +60,7 @@ Spread operator
 
 Modules export/import
 
-# Libraries/Frameworks:
+# Libraries/Frameworks
 
 styled-components
 
