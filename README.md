@@ -32,7 +32,7 @@ CVC: 123
 
 https://petplaats.herokuapp.com/
 
-# Getting Started
+# Getting Started:
 
 To get started you can simply clone the repo and install the dependencies in the root folder
 
