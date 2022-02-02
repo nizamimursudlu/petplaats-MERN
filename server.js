@@ -23,10 +23,13 @@ if (process.env.NODE_ENV === 'production') {
 
 async function start() {
   try {
-    await mongoose.connect(process.env.MONGO_DB, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(
+      'mongodb+srv://petshop:EwQpI904kIk9FW85@cluster0.wy4db.mongodb.net/petshop?retryWrites=true&w=majority',
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      },
+    );
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });
