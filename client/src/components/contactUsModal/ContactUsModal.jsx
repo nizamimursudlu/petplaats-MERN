@@ -20,6 +20,7 @@ export const ContactUsModal = ({ closeModal }) => {
 
   const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } =
     process.env;
+  console.log(process.env.REACT_APP_USER_ID);
 
   async function sendEmail(e) {
     e.preventDefault();
