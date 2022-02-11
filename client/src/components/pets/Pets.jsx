@@ -13,9 +13,7 @@ export const Pets = ({ cat, filters }) => {
     const getProducts = async () => {
       try {
         const res = await axios.get(
-          cat
-            ? `https://github.com/nizamimursudlu/petplaats-MERN/blob/main/client/src/components/pets?category=${cat}`
-            : 'https://github.com/nizamimursudlu/petplaats-MERN/blob/main/client/src/components/pets',
+          cat ? `/api/pets?category=${cat}` : '/api/pets',
         );
         setPets(res.data);
       } catch (err) {}
