@@ -31,9 +31,7 @@ const PetDetails = () => {
   useEffect(() => {
     const getPet = async () => {
       try {
-        const res = await axios.get(
-          'http://localhost:5001/api/pets/find/' + id,
-        );
+        const res = await axios.get('/api/pets/find/' + id);
         setPet(res.data);
       } catch (err) {}
     };
