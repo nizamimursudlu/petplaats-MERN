@@ -30,7 +30,7 @@ MM/YY: 12/23
 
 CVC: 123
 
-https://petplaats.herokuapp.com/
+https://petplaats-test.herokuapp.com/
 
 # Getting Started:
 
@@ -38,9 +38,9 @@ To get started you can simply clone the repo and install the dependencies in the
 
 Steps:
 
-Install npm install
+Install: npm install
 
-Run npm run dev
+Run: npm run dev
 
 Runs the app in the development mode.
 
